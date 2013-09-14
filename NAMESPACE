@@ -10,4 +10,6 @@ export(aoristic.density)
 export(aoristic.grid)
 export(aoristic.shp)
 export(aoristic.spdf)
+export(arlington)
+
 
