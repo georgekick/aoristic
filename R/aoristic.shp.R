@@ -20,8 +20,7 @@ aoristic.shp <- function(spdf, area.shp){
   time23=NULL
   freq=NULL
   
-  CRS <- "+proj=longlat +datum=WGS84"
-  # CRS <- "+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0"
+  CRS <- "+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0"
   if(!area.shp@proj4string@projargs==CRS(CRS)@projargs){stop("the coordinate reference system is not in WGS84")}
   
   # create output location
