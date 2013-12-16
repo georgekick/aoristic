@@ -4,6 +4,7 @@
 #' @return kml file (an output folder will be generated in the current working directory)
 #' @references Ratcliffe, J. H. (2002). Aoristic Signatures and the Spatio-Temporal Analysis of High Volume Crime Patterns. Journal of Quantitative Criminology, 18(1), 23-43. 
 #' @import lubridate classInt reshape2 GISTools ggplot2 spatstat
+#' @export
 #' @examples
 #' \donttest{
 #' data.spdf <- aoristic.spdf(data=arlington, 

@@ -2,6 +2,7 @@
 #' @param data data.frame created by aoristic.df
 #' @return graph data.frame with two columns (hour, frequency) used to create an aoristic graph for the entire study area
 #' @import lubridate
+#' @export
 #' @examples
 #' \donttest{
 #' data <- aoristic.df(data=arlington)

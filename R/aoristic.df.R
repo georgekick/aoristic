@@ -5,6 +5,7 @@
 #' @param DateTimeTo a character vector of the column name for ToDateTime (POSIXct date-time object).  If ending date-time is missing, duration of an event will be coded as 1 hour.
 #' @return data.frame
 #' @import lubridate
+#' @export
 #' @references Ratcliffe, J. H. (2002). Aoristic Signatures and the Spatio-Temporal Analysis of High Volume Crime Patterns. Journal of Quantitative Criminology, 18(1), 23-43. 
 #' @examples
 #' \donttest{
