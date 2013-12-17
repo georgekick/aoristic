@@ -2,17 +2,17 @@
 \alias{aoristic.all.graph}
 \title{Creating a general aoristic graph using all data}
 \usage{
-  aoristic.all.graph(data)
+aoristic.all.graph(data)
 }
 \arguments{
   \item{data}{data.frame created by aoristic.df}
 }
 \value{
-  graph data.frame with two columns (hour, frequency) used
-  to create an aoristic graph for the entire study area
+graph data.frame with two columns (hour, frequency) used to
+create an aoristic graph for the entire study area
 }
 \description{
-  Creating a general aoristic graph using all data
+Creating a general aoristic graph using all data
 }
 \examples{
 \donttest{

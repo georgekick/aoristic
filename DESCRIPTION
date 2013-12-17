@@ -20,14 +20,6 @@ Description: 'Aoristic' is one of the past tenses in Greek and represents an
     count; and 3) shapefile boundary. (see also:
     https://sites.google.com/site/georgekick/software)
 License: GPL (>= 2)
-Collate:
-    'aoristic.all.graph.R'
-    'aoristic.df.R'
-    'aoristic.grid.R'
-    'aoristic.spdf.R'
-    'aoristic.density.R'
-    'aoristic.shp.R'
-    'aoristic-package.R'
 Depends:
     ggplot2,
     spatstat,
@@ -36,7 +28,7 @@ Imports:
     lubridate,
     classInt,
     reshape2
-LazyData: FALSE
+LazyData: true
 References: Ratcliffe, J. H. (2002). Aoristic Signatures and the
     Spatio-Temporal Analysis of High Volume Crime Patterns. Journal
     of Quantitative Criminology, 18(1), 23-43.
