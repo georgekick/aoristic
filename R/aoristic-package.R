@@ -35,3 +35,6 @@ NULL
 #' @source City of Arlington 
 #' @author George Kikuchi, 2013-09-13
 NULL
+#' @name .Random.seed
+#' @docType data
+#' @description .Random.seed data created to avoid R CMD check error
