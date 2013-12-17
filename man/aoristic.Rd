@@ -1,6 +1,7 @@
 \docType{data}
 \name{aoristic}
 \alias{aoristic}
+\alias{aoristicData}
 \alias{aoristicSampleData}
 \title{Sample data of crime (df) and council district (spdf)}
 \source{
