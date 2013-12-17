@@ -27,8 +27,7 @@ Collate:
     'aoristic.spdf.R'
     'aoristic.density.R'
     'aoristic.shp.R'
-    'CouncilDistrict.r'
-    'arlington.R'
+    'aoristic-package.R'
 Depends:
     ggplot2,
     spatstat,
