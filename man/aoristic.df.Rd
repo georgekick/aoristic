@@ -24,6 +24,7 @@
 }
 \examples{
 \donttest{
+data(aoristic)
 data2 <- aoristic.df(data=arlington,
    DateTimeFrom="DateTimeFrom", DateTimeTo="DateTimeTo")
 head(data2)

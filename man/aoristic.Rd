@@ -1,6 +1,7 @@
 \docType{data}
 \name{aoristic}
 \alias{aoristic}
+\alias{aoristicData}
 \title{crime (df) and council district data (spdf)}
 \source{
   City of Arlington

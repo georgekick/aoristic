@@ -1,7 +1,7 @@
 \docType{package}
 \name{aoristic-package}
-\alias{aoristic}
 \alias{aoristic-package}
+\alias{aoristicAnalysis}
 \title{Creating a kml file with aoristic graph: Aoristic Analysis with spatial kml data}
 \description{
   Using crime incident data with lat/lon, DateTimeFrom, and

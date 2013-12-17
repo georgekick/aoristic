@@ -10,6 +10,7 @@
 #' @references Ratcliffe, J. H. (2002). Aoristic Signatures and the Spatio-Temporal Analysis of High Volume Crime Patterns. Journal of Quantitative Criminology, 18(1), 23-43. 
 #' @examples
 #' \donttest{
+#' data(aoristic)
 #' data.spdf <- aoristic.spdf(data=arlington, 
 #'    DateTimeFrom="FrmDateTimeFull", DateTimeTo="ToDateTimeFull", 
 #'    lon="lon", lat="lat")
