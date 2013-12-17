@@ -30,6 +30,7 @@
 }
 \examples{
 \donttest{
+data(aoristic)
 data.spdf <- aoristic.spdf(data=arlington,
    DateTimeFrom="FrmDateTimeFull", DateTimeTo="ToDateTimeFull",
    lon="lon", lat="lat")

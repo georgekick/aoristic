@@ -7,6 +7,7 @@
 #' @export
 #' @examples
 #' \donttest{
+#' data(aoristic)
 #' data.spdf <- aoristic.spdf(data=arlington, 
 #'    DateTimeFrom="DateTimeFrom", DateTimeTo="DateTimeTo", 
 #'    lon="lon", lat="lat")

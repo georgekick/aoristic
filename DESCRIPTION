@@ -36,7 +36,7 @@ Imports:
     lubridate,
     classInt,
     reshape2
-LazyData: true
+LazyData: FALSE
 References: Ratcliffe, J. H. (2002). Aoristic Signatures and the
     Spatio-Temporal Analysis of High Volume Crime Patterns. Journal
     of Quantitative Criminology, 18(1), 23-43.

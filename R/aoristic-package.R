@@ -1,5 +1,5 @@
 #' @name aoristic-package
-#' @aliases aoristic
+#' @aliases aoristicAnalysis
 #' @docType package
 #' @title Creating a kml file with aoristic graph: Aoristic Analysis with spatial kml data
 #' @description Using crime incident data with lat/lon, DateTimeFrom, and DateTimeTo, a total of three (3) aoristic graphs can be created: 1) density and contour; 2) grid count; and 3) shapefile boundary.
@@ -12,25 +12,10 @@
 #' @references Ratcliffe, J. H. (2002). Aoristic Signatures and the Spatio-Temporal Analysis of High Volume Crime Patterns. Journal of Quantitative Criminology, 18(1), 23-43.
 #' @keywords aoristic
 NULL
-#' @name arlington
-#' @title arlington burglary incident data (data frame)
-#' @description A data frame of burglary incidents in the Arlington PD with four fields (DateTimeFrom, DateTimeTo, lon/lat).
-#' @docType data
-#' @usage arlington
-#' @source Arlington PD 
-#' @author George Kikuchi, 2013-09-13
-NULL
-#' @name CouncilDistrict
-#' @title Council district (spatial polygon data frame)
-#' @description A spatial polygon data frame of council districts in the Arlington PD jurisdiction.
-#' @docType data
-#' @usage CouncilDistrict
-#' @source City of Arlington 
-#' @author George Kikuchi, 2013-09-13
-NULL
 #' @name aoristic
-#' @title crime (df) and council district data (spdf)
-#' @description A burglary incident data and spatial polygon data frame of council districts.
+#' @aliases aoristicSampleData
+#' @title Sample data of crime (df) and council district (spdf)
+#' @description Sample data of burglary incident data frame and spatial polygon data frame of council districts.
 #' @docType data
 #' @usage aoristic
 #' @source City of Arlington 
