@@ -13,12 +13,9 @@
 #' @keywords aoristic
 NULL
 #' @name aoristic
-#' @aliases aoristicSampleData
 #' @title Sample data of crime (df) and council district (spdf)
+#' @aliases aoristicSampleData
 #' @description Sample data of burglary incident data frame and spatial polygon data frame of council districts.
-#' @aliases aoristicData
-#' @title crime (df) and council district data (spdf)
-#' @description A burglary incident data and spatial polygon data frame of council districts.
 #' @docType data
 #' @usage aoristic
 #' @source City of Arlington 
