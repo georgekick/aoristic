@@ -1,8 +1,8 @@
 Package: aoristic
 Type: Package
 Title: aoristic analysis with spatial output (kml)
-Version: 0.3
-Date: 2013-09-11
+Version: 0.4
+Date: 2013-12-16
 Author: George Kikuchi
 Maintainer: George Kikuchi <gkikuchi@csufresno.edu>
 Description: 'Aoristic' is one of the past tenses in Greek and represents an
@@ -27,6 +27,8 @@ Collate:
     'aoristic.spdf.R'
     'aoristic.density.R'
     'aoristic.shp.R'
+    'CouncilDistrict.r'
+    'arlington.R'
 Depends:
     ggplot2,
     spatstat,
@@ -35,6 +37,7 @@ Imports:
     lubridate,
     classInt,
     reshape2
+LazyData: true
 References: Ratcliffe, J. H. (2002). Aoristic Signatures and the
     Spatio-Temporal Analysis of High Volume Crime Patterns. Journal
     of Quantitative Criminology, 18(1), 23-43.
