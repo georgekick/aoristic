@@ -1,7 +1,5 @@
-# load_all()
-# load("inst/extdata/arlington.Rdata")
-# setwd("inst")
 
+library(aoristic)
 data(aoristic)
 # testing aoristic.df
 data.ar <- aoristic.df(data=arlington, DateTimeFrom="DateTimeFrom", DateTimeTo="DateTimeTo")

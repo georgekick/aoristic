@@ -149,4 +149,13 @@ aoristic.density <- function(spdf){
   
   setwd(folder.location)
   
+  print(paste("KML output file is in ", getwd(), "/output/Density and Contour", sep=""))
+  
+  browseURL(file.path(folder.location, "output"))      
+        
+  browseURL(file.path(folder.location, "output", "Density and Contour", "Density.kml"))
+  Sys.sleep(10)
+  browseURL(file.path(folder.location, "output", "Density and Contour", "Aoristic_Contour.kml"))
+        
+  
 }

@@ -25,9 +25,9 @@ creating a data.frame for aoristic analysis
 \examples{
 \donttest{
 data(aoristic)
-data2 <- aoristic.df(data=arlington,
+data <- aoristic.df(data=arlington,
    DateTimeFrom="DateTimeFrom", DateTimeTo="DateTimeTo")
-head(data2)
+head(data)
 }
 }
 \references{

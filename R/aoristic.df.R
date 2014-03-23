@@ -10,9 +10,9 @@
 #' @examples
 #' \donttest{
 #' data(aoristic)
-#' data2 <- aoristic.df(data=arlington, 
+#' data <- aoristic.df(data=arlington, 
 #'    DateTimeFrom="DateTimeFrom", DateTimeTo="DateTimeTo")
-#' head(data2)
+#' head(data)
 #' }
 aoristic.df <- function(data, DateTimeFrom, DateTimeTo){
   if(!is.data.frame(data)) {stop("the input data frame specified is not a data.frame object")}

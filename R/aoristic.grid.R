@@ -148,4 +148,13 @@ cat(unlist(out["style",]), file=kmlFile, sep="\n")
 cat(unlist(out["content",]), file=kmlFile, sep="\n")
 cat(kmlPolygon()$footer, file=kmlFile, sep="\n")
 close(kmlFile)
+
+setwd(folder.location) 
+
+print(paste("KML output file is in ", getwd(), "/output/Grid", sep=""))
+
+browseURL(file.path(folder.location, "output"))
+
+browseURL(file.path(folder.location, "output", "Grid", "Aoristic_Grid.kml"))
+
 }
