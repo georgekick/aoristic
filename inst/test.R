@@ -21,4 +21,3 @@ Sys.sleep(10) # may need Sys.sleep for Google Earth to respond
 
 # testing aoristic.shp
 aoristic.shp(spdf=data.spdf, area.shp=CouncilDistrict)
-Sys.sleep(10) # may need Sys.sleep for Google Earth to respond

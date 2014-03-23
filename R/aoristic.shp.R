@@ -22,8 +22,16 @@ aoristic.shp <- function(spdf, area.shp){
   time23=NULL
   freq=NULL
   
-  CRS <- "+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0"
-  if(!area.shp@proj4string@projargs==CRS(CRS)@projargs){stop("the coordinate reference system is not in WGS84")}
+  # check projections
+  # ver 0.3
+  # CRS <- "+proj=longlat +datum=WGS84 +ellps=WGS84 +towgs84=0,0,0"
+  # if(!area.shp@proj4string@projargs==CRS(CRS)@projargs){stop("the coordinate reference system is not in WGS84")}
+  
+  # ver 0.5
+  CRS <- "+init=epsg:4326"
+  if(!area.shp@proj4string@projargs==CRS(CRS)@projargs){
+    area.shp <- spTransform(area.shp, CRS(CRS))
+  }
   
   # create output location
   folder.location <- getwd()
@@ -125,5 +133,4 @@ aoristic.shp <- function(spdf, area.shp){
  
  browseURL(file.path(folder.location, "output", "GISboundary", "Aoristic_GIS_boundary.kml"))
  
-
 }
