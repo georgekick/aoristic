@@ -17,7 +17,8 @@ Creating a general aoristic graph using all data
 \examples{
 \donttest{
 data(aoristic)
-data <- aoristic.df(data=arlington)
+data <- aoristic.df(data=arlington,
+         DateTimeFrom="DateTimeFrom", DateTimeTo="DateTimeTo")
 graph <- aoristic.all.graph(data=data)
 ggplot(graph, aes(x=hour, y=freq)) +
    geom_bar(stat="identity") +

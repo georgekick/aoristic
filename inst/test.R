@@ -1,7 +1,5 @@
-# load_all()
-# load("inst/extdata/arlington.Rdata")
-# setwd("inst")
 
+library(aoristic)
 data(aoristic)
 # testing aoristic.df
 data.ar <- aoristic.df(data=arlington, DateTimeFrom="DateTimeFrom", DateTimeTo="DateTimeTo")
@@ -15,9 +13,12 @@ data.spdf <- aoristic.spdf(data=arlington, DateTimeFrom="DateTimeFrom", DateTime
 
 # testing aoristic.grid
 aoristic.grid(spdf=data.spdf)
+Sys.sleep(10) # may need Sys.sleep for Google Earth to respond
 
 # testing aoristic.density
 aoristic.density(spdf=data.spdf)
+Sys.sleep(10) # may need Sys.sleep for Google Earth to respond
 
 # testing aoristic.shp
 aoristic.shp(spdf=data.spdf, area.shp=CouncilDistrict)
+Sys.sleep(10) # may need Sys.sleep for Google Earth to respond

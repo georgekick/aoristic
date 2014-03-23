@@ -118,5 +118,12 @@ aoristic.shp <- function(spdf, area.shp){
   close(kmlFile)
   
  setwd(folder.location) 
+ 
+ print(paste("KML output file is in ", getwd(), "/output/GISboundary", sep=""))
+ 
+ browseURL(file.path(folder.location, "output"))
+ 
+ browseURL(file.path(folder.location, "output", "GISboundary", "Aoristic_GIS_boundary.kml"))
+ 
 
 }
