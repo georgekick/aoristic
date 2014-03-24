@@ -1,4 +1,6 @@
 
+# install_github("georgekick/aoristic")
+
 library(aoristic)
 data(aoristic)
 # testing aoristic.df

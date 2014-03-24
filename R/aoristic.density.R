@@ -1,5 +1,8 @@
 #' aoristic graph by grid count
 #' @param spdf spatial point data frame produced from aoristic.spdf 
+#' @param h h parameter for the function kde2d (default=0.01); std. dev. 
+#' @param n n parameter for the function kde2d (default=128); No. of cells in xy directions
+#' @param q percentile to be identified as hot spots for the function quantile (default=0.99)
 #' @return kml file (an output folder will be generated in the current working directory)
 #' @references Ratcliffe, J. H. (2002). Aoristic Signatures and the Spatio-Temporal Analysis of High Volume Crime Patterns. Journal of Quantitative Criminology, 18(1), 23-43. 
 #' @import lubridate classInt reshape2 GISTools ggplot2 spatstat
@@ -12,7 +15,7 @@
 #'    lon="lon", lat="lat")
 #' aoristic.density(spdf=data.spdf)
 #' }
-aoristic.density <- function(spdf){
+aoristic.density <- function(spdf, h=0.01, n=128, probs=0.9){
   
   #defining variables (to avoid "Note" in the package creation)
   sortID=NULL
@@ -29,12 +32,12 @@ aoristic.density <- function(spdf){
   # create point data
   data.ppp <- as(spdf, "ppp")
   
-  kde <- kde2d(x=data.ppp$x, y=data.ppp$y, h=0.01, n=128) 
+  kde <- kde2d(x=data.ppp$x, y=data.ppp$y, h=h, n=n) 
   # image(kde)
   # quantile(kde$z, 0.99)
   # contour(kde, levels=c(quantile(kde$z, 0.99)), add=TRUE)
   # c <- contourLines(kde$x, kde$y, kde$z)
-  c <- contourLines(kde, levels=c(quantile(kde$z, 0.99)))
+  c <- contourLines(kde, levels=c(quantile(kde$z, probs)))
   # convert a list to SpatialPolygons
   for (i in 1:length(c)){
     xy <- cbind(c[[i]]$x, c[[i]]$y)
