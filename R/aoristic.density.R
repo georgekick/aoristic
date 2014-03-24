@@ -2,7 +2,7 @@
 #' @param spdf spatial point data frame produced from aoristic.spdf 
 #' @param h h parameter for the function kde2d (default=0.01); std. dev. 
 #' @param n n parameter for the function kde2d (default=128); No. of cells in xy directions
-#' @param q percentile to be identified as hot spots for the function quantile (default=0.99)
+#' @param probs percentile to be identified as hot spots for the function quantile (default=0.99)
 #' @return kml file (an output folder will be generated in the current working directory)
 #' @references Ratcliffe, J. H. (2002). Aoristic Signatures and the Spatio-Temporal Analysis of High Volume Crime Patterns. Journal of Quantitative Criminology, 18(1), 23-43. 
 #' @import lubridate classInt reshape2 GISTools ggplot2 spatstat

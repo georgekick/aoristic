@@ -14,8 +14,8 @@ aoristic.density(spdf, h = 0.01, n = 128, probs = 0.9)
   \item{n}{n parameter for the function kde2d
   (default=128); No. of cells in xy directions}
 
-  \item{q}{percentile to be identified as hot spots for the
-  function quantile (default=0.99)}
+  \item{probs}{percentile to be identified as hot spots for
+  the function quantile (default=0.99)}
 }
 \value{
 kml file (an output folder will be generated in the current
