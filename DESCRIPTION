@@ -2,7 +2,7 @@ Package: aoristic
 Type: Package
 Title: aoristic analysis with spatial output (kml)
 Version: 0.5
-Date: 2014-03-23
+Date: 2014-07-30
 Author: George Kikuchi
 Maintainer: George Kikuchi <gkikuchi@csufresno.edu>
 Description: 'Aoristic' is one of the past tenses in Greek and represents an
@@ -15,7 +15,7 @@ Description: 'Aoristic' is one of the past tenses in Greek and represents an
     period. The probability is aggregated over a study area to create an
     aoristic graph.
     Using crime incident data with lat/lon, DateTimeFrom, and
-    DateTimeTo, functions in this package creates a total of three (3) kml
+    DateTimeTo, functions in this package create a total of three (3) kml
     files and corresponding aoristic graphs: 1) density and contour; 2) grid
     count; and 3) shapefile boundary. (see also:
     https://sites.google.com/site/georgekick/software)
@@ -27,7 +27,9 @@ Depends:
 Imports:
     lubridate,
     classInt,
-    reshape2
+    reshape2,
+    rgdal,
+    plotKML
 LazyData: true
 References: Ratcliffe, J. H. (2002). Aoristic Signatures and the
     Spatio-Temporal Analysis of High Volume Crime Patterns. Journal

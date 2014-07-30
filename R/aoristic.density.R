@@ -3,7 +3,8 @@
 #' @param h h parameter for the function kde2d (default=0.01); std. dev. 
 #' @param n n parameter for the function kde2d (default=128); No. of cells in xy directions
 #' @param probs percentile to be identified as hot spots for the function quantile (default=0.99)
-#' @return kml file (an output folder will be generated in the current working directory)
+#' @param output a character representing the name of an output folder (the folder will be generated in the current working directory; default name = output) 
+#' @return kml file
 #' @references Ratcliffe, J. H. (2002). Aoristic Signatures and the Spatio-Temporal Analysis of High Volume Crime Patterns. Journal of Quantitative Criminology, 18(1), 23-43. 
 #' @import lubridate classInt reshape2 GISTools ggplot2 spatstat
 #' @export
@@ -15,7 +16,7 @@
 #'    lon="lon", lat="lat")
 #' aoristic.density(spdf=data.spdf)
 #' }
-aoristic.density <- function(spdf, h=0.01, n=128, probs=0.9){
+aoristic.density <- function(spdf, h=0.01, n=128, probs=0.99, output="output"){
   
   #defining variables (to avoid "Note" in the package creation)
   sortID=NULL
@@ -25,9 +26,15 @@ aoristic.density <- function(spdf, h=0.01, n=128, probs=0.9){
   
   # creating output folder
   folder.location <- getwd()
-  dir.create(file.path(folder.location, "output"), showWarnings = FALSE)
-  dir.create(file.path(folder.location, "output", "Density and Contour"), showWarnings = FALSE)
-  setwd(file.path(folder.location, "output", "Density and Contour"))
+  
+  tryCatch({
+    dir.create(file.path(folder.location, output), showWarnings = FALSE)
+    dir.create(file.path(folder.location, output, "Density and Contour"), showWarnings = TRUE)
+  }, warning=function(w){
+    stop(paste("The output folder already exists in: ", getwd(), "/", output, "/Density and Contour", sep=""))
+  })
+  
+  setwd(file.path(folder.location, output, "Density and Contour"))
   
   # create point data
   data.ppp <- as(spdf, "ppp")
@@ -112,7 +119,7 @@ aoristic.density <- function(spdf, h=0.01, n=128, probs=0.9){
                                                                     description=paste("<img src=", 
                                                                                       as(area.shp, "data.frame")[slot(x, "ID"), "img"], " width=\"450\">", sep=""))})
   
-  kml.folder <- file.path(folder.location, "output", "Density and Contour")
+  kml.folder <- file.path(folder.location, output, "Density and Contour")
   tf <- file.path(kml.folder, "Aoristic_Contour.kml")
   
   kmlFile <- file(tf, "w")
@@ -127,7 +134,7 @@ aoristic.density <- function(spdf, h=0.01, n=128, probs=0.9){
   
   # kernel density -> KML ------------------
   
-  sp.pix <- kde.points(spdf, h=0.01, n=128)
+  sp.pix <- kde.points(spdf, h=h, n=n)
   sp.grd <- as(sp.pix, "SpatialGridDataFrame")
   sp.grd@data$kde[sp.grd@data$kde < quantile(sp.grd@data$kde, 0.5)] <- NA
   
@@ -152,13 +159,13 @@ aoristic.density <- function(spdf, h=0.01, n=128, probs=0.9){
   
   setwd(folder.location)
   
-  print(paste("KML output file is in ", getwd(), "/output/Density and Contour", sep=""))
+  print(paste("KML output file is in ", getwd(), "/", output, "/Density and Contour", sep=""))
   
-  browseURL(file.path(folder.location, "output"))      
+  browseURL(file.path(folder.location, output))      
         
-  browseURL(file.path(folder.location, "output", "Density and Contour", "Density.kml"))
+  browseURL(file.path(folder.location, output, "Density and Contour", "Density.kml"))
   Sys.sleep(10)
-  browseURL(file.path(folder.location, "output", "Density and Contour", "Aoristic_Contour.kml"))
+  browseURL(file.path(folder.location, output, "Density and Contour", "Aoristic_Contour.kml"))
         
   
 }
