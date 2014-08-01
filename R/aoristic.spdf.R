@@ -12,7 +12,7 @@
 #' \donttest{
 #' data(aoristic)
 #' data.spdf <- aoristic.spdf(data=arlington, 
-#'    DateTimeFrom="FrmDateTimeFull", DateTimeTo="ToDateTimeFull", 
+#'    DateTimeFrom="DateTimeFrom", DateTimeTo="DateTimeTo", 
 #'    lon="lon", lat="lat")
 #' }
 aoristic.spdf <- function(data, DateTimeFrom, DateTimeTo, lon, lat){
